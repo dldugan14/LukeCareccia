@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Ashfaq`,
+    title: `Luke Careccia`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
   },
@@ -69,15 +69,30 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/realtorFavicon.jpg`, // This path is relative to the root of the site.
       },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-155394774-1",
+        trackingId: "UA-177589466-1",
       },
     },
+    {
+      resolve: 'gatsby-plugin-newrelic',
+      options: {
+        instrumentationType: 'proAndSPA', // Options are 'lite', 'pro', 'proAndSPA'
+        configs: {
+          accountId: '2865038',
+          trustKey: '2865038',
+          agentID: '344478096',
+          licenseKey: 'NRJS-3705927db801eea4c76',
+          applicationID: '344478096',
+          beacon: 'bam.nr-data.net',
+          errorBeacon: 'bam.nr-data.net'
+        }
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
